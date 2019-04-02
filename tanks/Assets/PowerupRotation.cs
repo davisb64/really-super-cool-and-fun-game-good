@@ -12,4 +12,17 @@ public class PowerupRotation : MonoBehaviour
         Vector3 rotation = new Vector3(rotationSpeed, -2 * rotationSpeed, rotationSpeed);
         transform.Rotate(rotation);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Touching Something");
+        if (other.CompareTag("Player"))
+        {
+            FireControl hit = other.transform.root.GetComponent<FireControl>();
+            Debug.Log("It's a powerup");
+            hit.count = 5f;
+            hit.firework = true;
+            Destroy(this.gameObject);
+        }
+    }
 }

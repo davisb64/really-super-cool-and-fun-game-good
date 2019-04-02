@@ -4839,3 +4839,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e71fdc3672530a6428265834ad23ea01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireRate: 1
+  blastSpeed: 20
+  blastLife: 2
+  timeDestroy: 0.5
+  dmg: 20
+  expl: {fileID: 8300000, guid: cb3e091301d10c14cadb6bc1b519580b, type: 3}
+  smonk: {fileID: 4743270083921948282, guid: b0ce4496156aba7409a9274c07a59417, type: 3}
+  mmmmmmmyParent: {fileID: 0}

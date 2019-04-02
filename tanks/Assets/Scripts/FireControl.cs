@@ -16,7 +16,7 @@ public class FireControl : MonoBehaviour
     private AudioSource audioPlayer;
     public AudioClip shot;
     public bool firework = false;
-    public int count = 0;
+    public float count = 0f;
     public float health = 0;
 
     // Start is called before the first frame update
@@ -30,7 +30,7 @@ public class FireControl : MonoBehaviour
     {
         if (firework)
         {
-            count -= 1;
+            count -= Time.deltaTime;
             fireWorks();
         }
         else
@@ -97,17 +97,7 @@ public class FireControl : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("Touching Something");
-        if (other.CompareTag("powerup"))
-        {
-            Debug.Log("It's a powerup");
-            Destroy(other.gameObject);
-            count = 600;
-            firework = true;
-        }
-    }
+    
 
     private void shooty()
     {
