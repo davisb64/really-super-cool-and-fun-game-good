@@ -21,7 +21,6 @@ public class PowerupRotation : MonoBehaviour
             FireControl hit = other.transform.root.GetComponent<FireControl>();
             Debug.Log("It's a powerup");
             hit.count = 5f;
-            hit.firework = true;
             Destroy(this.gameObject);
         }
     }

@@ -15,7 +15,6 @@ public class FireControl : MonoBehaviour
     public float timeDestroy = 10f;
     private AudioSource audioPlayer;
     public AudioClip shot;
-    public bool firework = false;
     public float count = 0f;
     public float health = 0;
 
@@ -28,7 +27,7 @@ public class FireControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (firework)
+        if (count > 0)
         {
             count -= Time.deltaTime;
             fireWorks();
